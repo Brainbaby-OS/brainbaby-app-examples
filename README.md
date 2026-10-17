@@ -17,11 +17,11 @@ Tick the six tasks, watch the count change, complete the list and reset it. Prog
 | Resource | What you can check |
 | --- | --- |
 | [React source](examples/garden-checklist) | Components, local state, task data and styling |
-| [Original export ZIP](downloads/garden-checklist-original.zip) | The unchanged file downloaded from Brainbaby |
+| [Original export ZIP](downloads/garden-checklist-original.zip) | Historical unchanged download; use the runnable folder for patched build tooling |
 | [Brief and evaluation workflow](docs/build-and-evaluate.md) | The instruction used for this app and checks for your own version |
 | [File provenance](docs/garden-checklist-provenance.json) | Original file hashes and the scope of the verification |
 
-The 13 files inside the original export are unchanged. The example folder also includes the lockfile from the independent verification build. Repository documentation, this screenshot and the integrity checker are separate additions.
+The original ZIP remains byte-for-byte unchanged. The runnable folder keeps the same app code and updates Vite to 6.4.3 to address the reported development-server advisories. It includes a lockfile for that patched toolchain. The [provenance file](docs/garden-checklist-provenance.json) documents this build-manifest change; the components and styles are unchanged.
 
 ## Run the React example locally
 
@@ -47,7 +47,7 @@ From the repository root, check the original export's integrity with:
 node tools/verify-export.mjs
 ```
 
-The original ZIP does not contain a lockfile. Use the checked-in example folder if you want the recorded dependency resolution.
+Use the checked-in example folder for local execution. The historical ZIP contains the older build manifest and has no lockfile; it is retained to make the original export inspectable.
 
 ## Evaluate an AI app builder with a real task
 

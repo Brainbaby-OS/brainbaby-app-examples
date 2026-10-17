@@ -12,7 +12,7 @@ This is a demo instruction, not a promise that another generation will produce i
 
 The existing Brainbaby QA project was reopened and exercised on October 17, 2026. Its source was exported, installed and built independently. Browser checks at 390px and 1280px covered the six checkboxes, completion count, all-complete state, reset, keyboard interaction and horizontal overflow.
 
-The [provenance file](garden-checklist-provenance.json) identifies the unchanged original files. These checks establish the behavior of this small export. They do not establish fresh-generation quality, performance on a physical phone, complex application security or store readiness.
+The [provenance file](garden-checklist-provenance.json) identifies the original files and the runnable copy's Vite build-manifest patch. The patched toolchain was installed and built separately on the same date. These checks establish the behavior of this small export. They do not establish fresh-generation quality, performance on a physical phone, complex application security or store readiness.
 
 ## Make a brief for your own task
 

@@ -57,7 +57,7 @@
       "sha256": "47cc1c1196cec7fbe0d0b274b4da9b226b845b92c7aafae14df5133dbe3b4093"
     }
   ],
-  "additionalFile": "package-lock.json records the dependency resolution used for the independent verification build",
+  "additionalFile": "package-lock.json records the dependency resolution used for the patched Vite 6.4.3 verification build",
   "verifiedInteractions": [
     "six labeled checkboxes",
     "completion count and all-complete state",
@@ -65,5 +65,25 @@
     "keyboard use",
     "no horizontal overflow at 390px and 1280px"
   ],
-  "scope": "Original owner QA frontend example, not a customer story. Local state clears on reload. No backend, accounts, billing or native-store integration."
+  "scope": "Original owner QA frontend example, not a customer story. Local state clears on reload. No backend, accounts, billing or native-store integration.",
+  "runnableOverrides": [
+    {
+      "path": "package.json",
+      "sha256": "7818ace3353b209e44d6d9ce61f4daa6ec10fda6a6db4faf8aa7e16bedfc5689",
+      "reason": "Vite updated from ^5.4.0 to 6.4.3 to address reported development-server advisories; application code is unchanged."
+    }
+  ],
+  "patchedToolchainVerification": {
+    "checkedOn": "2026-10-17",
+    "vite": "6.4.3",
+    "esbuild": "0.25.12",
+    "productionBuild": "passed",
+    "npmAuditKnownVulnerabilities": 0,
+    "browserChecks": [
+      "all six tasks and completion banner",
+      "reset clears tasks",
+      "keyboard Space toggles a task",
+      "reload returns to zero tasks"
+    ]
+  }
 }

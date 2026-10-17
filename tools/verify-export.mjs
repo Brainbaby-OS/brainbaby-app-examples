@@ -11,6 +11,9 @@ assert.equal(hash(readFileSync(resolve(root, 'downloads/garden-checklist-origina
 assert.equal(manifest.originalFiles.length, 13, 'Original export inventory differs');
 for (const file of manifest.originalFiles) {
   assert.match(file.path, /^(?:src\/(?:components\/|pages\/|utils\/)?[A-Za-z]+\.(?:tsx|jsx|css)|(?:package\.json|vite\.config\.ts|tsconfig\.json|index\.html|README\.md))$/);
-  assert.equal(hash(readFileSync(resolve(root, 'examples/garden-checklist', file.path))), file.sha256, `Original source differs: ${file.path}`);
+  const patch = manifest.runnableOverrides.find(item => item.path === file.path);
+  if (patch) assert.equal(patch.path, 'package.json', 'Only the build manifest may have a documented override');
+  assert.equal(hash(readFileSync(resolve(root, 'examples/garden-checklist', file.path))), patch?.sha256 ?? file.sha256, `Undocumented source change: ${file.path}`);
 }
-console.log('Verified unchanged original ZIP and all 13 source files. This is an integrity check, not a functional or security audit.');
+assert.equal(manifest.runnableOverrides.length, 1, 'Expected one documented build-manifest patch');
+console.log('Verified unchanged original ZIP, 12 original runnable files and the documented build-manifest patch. This is an integrity check, not a functional or security audit.');
