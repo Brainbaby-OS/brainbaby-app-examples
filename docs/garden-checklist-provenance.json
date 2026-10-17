@@ -1,0 +1,69 @@
+{
+  "example": "garden-checklist",
+  "source": "https://brainbaby.ai/templates/en/garden-checklist.zip",
+  "sourceZipSha256": "96918e624894203fc5f9877d4e35a81b0ed7189f9b9281d39ed83f3fd5d2f7f5",
+  "verifiedOn": "2026-10-17",
+  "originalFiles": [
+    {
+      "path": "src/App.tsx",
+      "sha256": "e8650befb173c7ff538d2321ee21fde7ae491ac1cc25c740c6ddd9a332e6043e"
+    },
+    {
+      "path": "src/components/ChecklistItem.jsx",
+      "sha256": "7d4d9c782fdf99951a6a6c79aae49fcf582d3fce30c8edb69f6c9f77024dd93a"
+    },
+    {
+      "path": "src/components/Footer.jsx",
+      "sha256": "41d46c2ebe0cd061bf22f9e991283c90d68abaf614e690fe7ce013b193a933ac"
+    },
+    {
+      "path": "src/pages/ChecklistPage.jsx",
+      "sha256": "d59819feb638fe4816cc028641e54c2535f520610bcb3998e19a1e0dfa9ad073"
+    },
+    {
+      "path": "src/styles.css",
+      "sha256": "a43a7965a021a214979e4b719b55166b69d18ff0266844c48bf7eeb47e4d2f76"
+    },
+    {
+      "path": "src/utils/constants.jsx",
+      "sha256": "8a12098b64b7b8d5187df47891a269a50eb6ac6e7f55ee349da0f3776dc6a5a2"
+    },
+    {
+      "path": "src/index.tsx",
+      "sha256": "61f89e4ede5ceb94ac48d65c84751d7f9d95658311a5a9bf5905307448b04017"
+    },
+    {
+      "path": "src/index.css",
+      "sha256": "9f82ab5f2a03af18c7a04bd827deec86781f44c990197558e3b0d249c9d566df"
+    },
+    {
+      "path": "package.json",
+      "sha256": "10cd30469e0ad6df0daba7a92c87851b5a51b60564f0fa562ddebc65b309e197"
+    },
+    {
+      "path": "vite.config.ts",
+      "sha256": "099316384050c3d7218e68808140ea3c9e69d0dab29e32b34c8540a24fc11e57"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "4f9217e589579952eadf393f30288c056937dafd94077627028b7da3f8cf7196"
+    },
+    {
+      "path": "index.html",
+      "sha256": "b767e43d5ca6674e084ccf368928a737895205628ceb00223541506cafdc6962"
+    },
+    {
+      "path": "README.md",
+      "sha256": "47cc1c1196cec7fbe0d0b274b4da9b226b845b92c7aafae14df5133dbe3b4093"
+    }
+  ],
+  "additionalFile": "package-lock.json records the dependency resolution used for the independent verification build",
+  "verifiedInteractions": [
+    "six labeled checkboxes",
+    "completion count and all-complete state",
+    "reset",
+    "keyboard use",
+    "no horizontal overflow at 390px and 1280px"
+  ],
+  "scope": "Original owner QA frontend example, not a customer story. Local state clears on reload. No backend, accounts, billing or native-store integration."
+}
